@@ -14,6 +14,6 @@
 1. Method Hiding Factor
 2. Attribute Hiding Factor
 3. Method Inheritance Factor
-4. Attribute Inheritance Factor
-5. Polymorphism Factor
-6. Coupling Factor
+4. Attribute Inheritance Factor (Not Implememnted yet)
+5. Polymorphism Factor (Not Implememnted yet)
+6. Coupling Factor (Not Implememnted yet)
