@@ -14,6 +14,8 @@ try:
 except ImportError:
     from io import StringIO
 import textwrap
+import pandas as pd
+import numpy as np
 
 mdef = '''
 import V
@@ -279,6 +281,12 @@ def coupling_factor(astree):
     for clas in astree:
         classes.append(clas.name)
     #print(classes)
+    #df = pd.DataFrame(np.zeros(len(classes), len(classes)))
+    df = pd.DataFrame(0, index=range(len(classes)), columns=range(len(classes)))
+    #print(df)
+    df.columns = classes
+    df.index = classes
+    #print(df)       
     coupling = 0
     for clas in astree:
         for func in clas.body:
@@ -286,6 +294,9 @@ def coupling_factor(astree):
                 if isinstance(line, ast.Assign) and isinstance(line.value, ast.Call):
                     if line.value.func.id in classes:
                         coupling+=1
+                        df[clas.name][line.value.func.id] = 1
+    print("Coupling Between Objects: ")
+    print(df)
     print("    COF: ", coupling/len(classes))
                     
 def CK_MOOD_Metrics(inheritance_tree, all_node, astree):  
