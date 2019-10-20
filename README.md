@@ -16,4 +16,4 @@
 3. Method Inheritance Factor
 4. Attribute Inheritance Factor (Not Implememnted yet)
 5. Polymorphism Factor (Not Implememnted yet)
-6. Coupling Factor (Not Implememnted yet)
+6. Coupling Factor
