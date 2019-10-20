@@ -11,7 +11,27 @@ try:
     from StringIO import StringIO
 except ImportError:
     from io import StringIO
-
+mdef = '''class A(object):
+    def meth(self):
+        return sum(i for i in range(10) if i - 2 < 5)
+    def fib(self, n):
+        pass
+class B(A):
+    def _thi(self, mo):
+        return sum(i for i in range(10) if i - 2 < 5)
+    def fib(self, n):
+        self.p = 0
+        g = A()
+        g.meth()
+        h=0
+        __d = h
+        f, k = 0
+        if n < 2: return 1
+        return fib(n - 1) + fib(n - 2)
+class C(A, B):
+    def fr(self):
+        return 34
+    '''
 
 if_elif_else_dead_path = """\
 def f(n):
@@ -41,7 +61,7 @@ def get_complexity_number(snippet, strio, max=0):
     else:
         return None
 
-val = get_complexity_number(if_elif_else_dead_path, strio)
+val = get_complexity_number(mdef, strio)
 sys.stdout = stdout
 print(val)
 

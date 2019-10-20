@@ -10,7 +10,7 @@ import operator
 import collections
 try:
     import StringIO as io
-except ImportError:  # pragma: no cover
+except ImportError:
     import io
 
 

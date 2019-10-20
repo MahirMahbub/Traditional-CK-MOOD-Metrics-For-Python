@@ -9,8 +9,10 @@ import ast
 
 mdef = 'def foo(x):\n sod\n return 2*x'
 mdef = '''
+import V.ast
 class A(object):
     def meth(self):
+        a= ast()
         return sum(i for i in range(10) if i - 2 < 5)
     def fib(self, n):
         pass
