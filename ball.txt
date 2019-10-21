@@ -69,4 +69,86 @@ Coupling Between Objects:
        Ball  Block
 Ball      0      0
 Block     0      0
-    COF: 0.0
+    
+COF: 0.0
+
+
+
+Overall Report
+	LOC:  114
+	Multi Line of Comment:  0
+	Single Line of Comment:  17
+	Comment Percentage:  0.25
+	
+Classwise Report
+	Class Name:  Ball
+	  Method Number:  3
+	  Method Name:  __init__
+	    Parameter Length:  5
+	    LOC:  7
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  0
+	    Comment Percentage:  0.0
+	  Method Name:  update
+	    Parameter Length:  0
+	    LOC:  8
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  3
+	    Comment Percentage:  0.75
+	  Method Name:  draw
+	    Parameter Length:  2
+	    LOC:  3
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  1
+	    Comment Percentage:  0.5
+	LOC:  18
+	Multi Line of Comment:  0
+	Single Line of Comment:  4
+
+	Class Name:  Block
+	  Method Number:  7
+	  Method Name:  __init__
+	    Parameter Length:  5
+	    LOC:  7
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  1
+	    Comment Percentage:  0.2
+	  Method Name:  update
+	    Parameter Length:  0
+	    LOC:  4
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  1
+	    Comment Percentage:  0.5
+	  Method Name:  set_rectangle
+	    Parameter Length:  3
+	    LOC:  7
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  1
+	    Comment Percentage:  0.2
+	  Method Name:  draw
+	    Parameter Length:  2
+	    LOC:  3
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  0
+	    Comment Percentage:  0.0
+	  Method Name:  debug_create_balls
+	    Parameter Length:  0
+	    LOC:  6
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  1
+	    Comment Percentage:  0.3333333333333333
+	  Method Name:  debug_create_blocks
+	    Parameter Length:  0
+	    LOC:  4
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  0
+	    Comment Percentage:  0.0
+	  Method Name:  main
+	    Parameter Length:  -1
+	    LOC:  37
+	    Multi Line of Comment:  0
+	    Single Line of Comment:  8
+	    Comment Percentage:  0.4
+	LOC:  68
+	Multi Line of Comment:  0
+	Single Line of Comment:  12
