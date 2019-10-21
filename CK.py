@@ -17,11 +17,11 @@ import textwrap
 import pandas as pd
 import numpy as np
 import tokenize
+from Raw import *
 
 f = open("result5.txt",'w')
 
 mdef = '''
-import V
 class A(object):
     def meth(self):
         return sum(i for i in range(10) if i - 2 < 5)
@@ -477,7 +477,40 @@ def coupling_factor(astree):
     f.write("Coupling Between Objects: \n")
     f.write(df.to_string())
     f.write("\n    COF: "+str(coupling/len(classes))+str("\n"))
-                    
+def large_Class_Method(source):
+    classes = re.findall('(class[\s\S]*?)(?=class|$)',source)
+    for clas in classes:
+        method_list = findAllMethods(clas)
+        clas_len = 0
+        clas_multi = 0
+        clas_comments = 0
+        c = ast.parse(clas)
+        class_def = [n for n in ast.walk(c) if type(n) == ast.ClassDef]
+        print("Class Name: ", class_def[0].name)
+        print("  Method Number: ", len(method_list))
+        for meth in method_list:
+            meth = textwrap.dedent(meth)
+            a = ast.parse(meth)
+            definitions = [n for n in ast.walk(a) if type(n) == ast.FunctionDef]
+            print("  Method Name: ", definitions[0].name)
+            loc = analyze(meth)
+            print("    Parameter Length: ", len(definitions[0].args.args)-1)
+            comment_percentage = loc.comments/(loc.loc-loc.blank-loc.comments)
+            #print("McCabe Cyclomatric Complexity: ", val)
+            print("    LOC: ",loc.loc)
+            clas_len+=loc.loc
+            print("    Multi Line of Comment: ", loc.multi)
+            clas_multi+=loc.multi
+            print("    Single Line of Comment: ", loc.comments)
+            clas_comments += loc.comments
+            print("    Comment Percentage: ",comment_percentage)
+            #print(clas) 
+        
+        print("LOC: ",clas_len)
+        print("Multi Line of Comment: ", clas_multi)
+        print("Single Line of Comment: ", clas_comments)
+        print()
+        
 def CK_MOOD_Metrics(mdef, inheritance_tree, all_node, astree):  
     maxi = depth_of_inheritance_tree_util(inheritance_tree, 0, 0)
     child_tree = Number_of_child(inheritance_tree, all_node)
@@ -487,13 +520,15 @@ def CK_MOOD_Metrics(mdef, inheritance_tree, all_node, astree):
     method_inheritance_factor(inheritance_tree, child_tree, astree, all_node)
     weighted_method_per_class(mdef)
     coupling_factor(astree)
+    #large_Class_Method(mdef)
 if __name__ == "__main__":    
     
     inheritance_tree, all_node, astree = inheritance_tree(mdef)    
     CK_MOOD_Metrics(mdef, inheritance_tree, all_node, astree)
     loc = Raw.analyze(mdef)
     comment_percentage = loc.comments/(loc.loc-loc.blank-loc.comments)
-    print("McCabe Cyclomatric Complexity: ", val)
+    print("Overall Report: ")
+    #print("McCabe Cyclomatric Complexity: ", val)
     print("LOC: ",loc.loc)
     print("Multi Line of Comment: ", loc.multi)
     print("Single Line of Comment: ", loc.comments)

@@ -93,24 +93,26 @@ def read_files(path_list):
     for path in path_list:
         with open(path,encoding="utf8", mode = 'r') as reader:
             val = reader.read()
-            #mdef += "\n"
+            mdef += "\n"
             mdef += val
         
     return mdef
 
-path_List =collectingPath(r"C:\Users\mahir\Desktop\atm\\")
+path_List =collectingPath(r"C:\Users\mahir\Desktop\Python-OOP-Toy-master\\")
 mdef = read_files(path_List)
-loc = Raw.analyze(mdef)
-comment_percentage = loc.comments/(loc.loc-loc.blank-loc.comments)
+loca = Raw.analyze(mdef)
+comment_percentage = loca.comments/(loca.loc-loca.blank-loca.comments)
 #print("McCabe Cyclomatric Complexity: ", val)
-print("LOC: ",loc.loc)
-print("Multi Line of Comment: ", loc.multi)
-print("Single Line of Comment: ", loc.comments)
+print("Overall Report")
+print("LOC: ",loca.loc)
+print("Multi Line of Comment: ", loca.multi)
+print("Single Line of Comment: ", loca.comments)
 print("Comment Percentage: ",comment_percentage)
-mdef = remove_comments_and_docstrings(mdef)
-print(mdef)
-inherit_tree, all_node, astree = inheritance_tree(mdef)  
-print(all_node)  
-CK_MOOD_Metrics(mdef, inherit_tree, all_node, astree)
+large_Class_Method(mdef)
+#mdef = remove_comments_and_docstrings(mdef)
+#print(mdef)
+#inherit_tree, all_node, astree = inheritance_tree(mdef)  
+#print(all_node)  
+#CK_MOOD_Metrics(mdef, inherit_tree, all_node, astree)
 
 
