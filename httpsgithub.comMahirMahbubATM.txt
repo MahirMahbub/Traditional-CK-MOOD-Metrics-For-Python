@@ -225,8 +225,303 @@ ATM                  0              0        0             0            0       
 
 COF: 1.0
 
+Overall Report
+    LOC:  327
+    Multi Line of Comment:  3
+    Single Line of Comment:  17
+    Comment Percentage:  0.07234042553191489
+    
+Classwise Report
+    Class Name:  Screen
+      Method Number:  3
+      Method Name:  __init__
+        Parameter Length:  0
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  displayMessage
+        Parameter Length:  1
+        LOC:  4
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  displayDollarAmount
+        Parameter Length:  1
+        LOC:  5
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  12
+    Multi Line of Comment:  0
+    Single Line of Comment:  0
 
-LOC:  322
-Multi Line of Comment:  0
-Single Line of Comment:  15
-Comment Percentage:  0.06437768240343347
+    Class Name:  CashDispenser
+      Method Number:  4
+      Method Name:  __init__
+        Parameter Length:  0
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  __init__
+        Parameter Length:  1
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  dispenseCash
+        Parameter Length:  1
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  isSufficientCashAvailable
+        Parameter Length:  1
+        LOC:  8
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  17
+    Multi Line of Comment:  0
+    Single Line of Comment:  0
+
+    Class Name:  Account
+      Method Number:  7
+      Method Name:  __init__
+        Parameter Length:  4
+        LOC:  6
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  validatePin
+        Parameter Length:  1
+        LOC:  6
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getAvailableBalance
+        Parameter Length:  0
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getTotalBalance
+        Parameter Length:  0
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  credit
+        Parameter Length:  1
+        LOC:  4
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  debit
+        Parameter Length:  1
+        LOC:  4
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getAccountNumber
+        Parameter Length:  0
+        LOC:  5
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  31
+    Multi Line of Comment:  0
+    Single Line of Comment:  0
+
+    Class Name:  BankDatabase
+      Method Number:  7
+      Method Name:  __init__
+        Parameter Length:  0
+        LOC:  7
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getAccount
+        Parameter Length:  1
+        LOC:  8
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  authenticateUser
+        Parameter Length:  2
+        LOC:  8
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getAvailableBalance
+        Parameter Length:  1
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getTotalBalance
+        Parameter Length:  1
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  credit
+        Parameter Length:  2
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  debit
+        Parameter Length:  2
+        LOC:  4
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  36
+    Multi Line of Comment:  0
+    Single Line of Comment:  0
+
+    Class Name:  Transaction
+      Method Number:  4
+      Method Name:  getAccountNumber
+        Parameter Length:  0
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getScreen
+        Parameter Length:  0
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  getBankDatabase
+        Parameter Length:  0
+        LOC:  3
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  execute
+        Parameter Length:  0
+        LOC:  4
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  13
+    Multi Line of Comment:  0
+    Single Line of Comment:  0
+
+    Class Name:  BalanceInquiry
+      Method Number:  2
+      Method Name:  __init__
+        Parameter Length:  3
+        LOC:  6
+        Multi Line of Comment:  0
+        Single Line of Comment:  1
+        Comment Percentage:  0.25
+      Method Name:  execute
+        Parameter Length:  0
+        LOC:  17
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  23
+    Multi Line of Comment:  0
+    Single Line of Comment:  1
+
+    Class Name:  Withdrawal
+      Method Number:  3
+      Method Name:  __init__
+        Parameter Length:  4
+        LOC:  8
+        Multi Line of Comment:  0
+        Single Line of Comment:  1
+        Comment Percentage:  0.2
+      Method Name:  execute
+        Parameter Length:  0
+        LOC:  25
+        Multi Line of Comment:  3
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  displayMenuOfAmounts
+        Parameter Length:  0
+        LOC:  18
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  51
+    Multi Line of Comment:  3
+    Single Line of Comment:  1
+
+    Class Name:  DepositSlot
+      Method Number:  1
+      Method Name:  isEnvelopeReceived
+        Parameter Length:  0
+        LOC:  4
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  4
+    Multi Line of Comment:  0
+    Single Line of Comment:  0
+
+    Class Name:  Deposit
+      Method Number:  3
+      Method Name:  __init__
+        Parameter Length:  4
+        LOC:  7
+        Multi Line of Comment:  0
+        Single Line of Comment:  1
+        Comment Percentage:  0.2
+      Method Name:  execute
+        Parameter Length:  0
+        LOC:  12
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  promptForDepositAmount
+        Parameter Length:  0
+        LOC:  6
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  25
+    Multi Line of Comment:  0
+    Single Line of Comment:  1
+
+    Class Name:  ATM
+      Method Number:  5
+      Method Name:  authenticateUser
+        Parameter Length:  0
+        LOC:  13
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  performTransaction
+        Parameter Length:  0
+        LOC:  14
+        Multi Line of Comment:  0
+        Single Line of Comment:  1
+        Comment Percentage:  0.08333333333333333
+      Method Name:  displayMainMenu
+        Parameter Length:  0
+        LOC:  9
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+      Method Name:  createTransaction
+        Parameter Length:  1
+        LOC:  12
+        Multi Line of Comment:  0
+        Single Line of Comment:  2
+        Comment Percentage:  0.2857142857142857
+      Method Name:  run
+        Parameter Length:  0
+        LOC:  11
+        Multi Line of Comment:  0
+        Single Line of Comment:  0
+        Comment Percentage:  0.0
+    LOC:  59
+    Multi Line of Comment:  0
+    Single Line of Comment:  3
