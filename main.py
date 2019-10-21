@@ -6,11 +6,14 @@ Created on Wed Oct 16 15:23:49 2019
 """
 import sys
 import Raw
+from CK import *
 from McCabe import get_code_complexity
 try:
     from StringIO import StringIO
 except ImportError:
     from io import StringIO
+import os
+
 mdef = '''class A(object):
     def meth(self):
         return sum(i for i in range(10) if i - 2 < 5)
@@ -44,7 +47,7 @@ def f(n):
     else:
         return "smaller than or equal to three"
 """
-
+'''
 stdout = sys.stdout
 strio = StringIO()
 sys.stdout = strio
@@ -72,5 +75,42 @@ print("LOC: ",loc.loc)
 print("Multi Line of Comment: ", loc.multi)
 print("Single Line of Comment: ", loc.comments)
 print("Comment Percentage: ",comment_percentage)
+'''
+
+def collectingPath(direc, pathList = []):
+    count = 0
+    for filename in os.listdir(direc):
+        pathway = os.path.join(direc, filename) 
+        if os.path.isfile(pathway) and pathway.endswith(".py"):
+            pathList.append(pathway)  
+        elif os.path.isdir(pathway):  
+            pathList = collectingPath(pathway,  pathList)
+    #print(len(pathList))
+    return pathList
+
+def read_files(path_list):
+    mdef = ""
+    for path in path_list:
+        with open(path,encoding="utf8", mode = 'r') as reader:
+            val = reader.read()
+            #mdef += "\n"
+            mdef += val
+        
+    return mdef
+
+path_List =collectingPath(r"C:\Users\mahir\Desktop\atm\\")
+mdef = read_files(path_List)
+loc = Raw.analyze(mdef)
+comment_percentage = loc.comments/(loc.loc-loc.blank-loc.comments)
+#print("McCabe Cyclomatric Complexity: ", val)
+print("LOC: ",loc.loc)
+print("Multi Line of Comment: ", loc.multi)
+print("Single Line of Comment: ", loc.comments)
+print("Comment Percentage: ",comment_percentage)
+mdef = remove_comments_and_docstrings(mdef)
+print(mdef)
+inherit_tree, all_node, astree = inheritance_tree(mdef)  
+print(all_node)  
+CK_MOOD_Metrics(mdef, inherit_tree, all_node, astree)
 
 

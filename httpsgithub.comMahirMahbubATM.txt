@@ -1,0 +1,232 @@
+Generating AST.......
+
+Parent Class: Screen
+
+Parent Class: CashDispenser
+
+Parent Class: Account
+
+Parent Class: BankDatabase
+
+Parent Class: Transaction
+
+Parent Class: BalanceInquiry
+
+    Inherited Class Transaction
+
+Parent Class: Withdrawal
+
+    Inherited Class Transaction
+
+Parent Class: DepositSlot
+
+Parent Class: Deposit
+
+    Inherited Class Transaction
+
+Parent Class: ATM
+
+Metrics Name: Depth of Inheritance Tree: 
+
+    DIT: 2
+
+Metrics Name: Number of Child
+
+    Class: BankDatabase
+        Number of Child: 0
+
+    Class: Account
+        Number of Child: 0
+
+    Class: CashDispenser
+        Number of Child: 0
+
+    Class: Transaction
+        Number of Child: 3
+
+    Class: ATM
+        Number of Child: 0
+
+    Class: BalanceInquiry
+        Number of Child: 0
+
+    Class: Screen
+        Number of Child: 0
+
+    Class: Deposit
+        Number of Child: 0
+
+    Class: Withdrawal
+        Number of Child: 0
+
+    Class: DepositSlot
+        Number of Child: 0
+
+Metrics Name: Attribute Hiding Factor
+
+    Class: Screen: 
+        FHF: 0.0
+    Class: CashDispenser: 
+        FHF: 0.0
+    Class: Account: 
+        FHF: 0.0
+    Class: BankDatabase: 
+        FHF: 0.0
+    Class: Transaction: 
+        FHF: 0.0
+    Class: BalanceInquiry: 
+        FHF: 0.0
+    Class: Withdrawal: 
+        FHF: 0.0
+    Class: DepositSlot: 
+        FHF: 0
+    Class: Deposit: 
+        FHF: 0.0
+    Class: ATM: 
+        FHF: 0.0
+Metrics Name: Method Hiding Factor
+
+    Class Screen: 
+        MHF: 0.3333333333333333
+    Class CashDispenser: 
+        MHF: 0.4
+    Class Account: 
+        MHF: 0.09090909090909091
+    Class BankDatabase: 
+        MHF: 0.125
+    Class Transaction: 
+        MHF: 0.0
+    Class BalanceInquiry: 
+        MHF: 0.5
+    Class Withdrawal: 
+        MHF: 0.2
+    Class DepositSlot: 
+        MHF: 0.0
+    Class Deposit: 
+        MHF: 0.2
+    Class ATM: 
+        MHF: 0.0
+Metrics Name: Method Inheritance Factor
+
+    Class: Screen
+        MIF: 0
+
+    Class: CashDispenser
+        MIF: 0
+
+    Class: Account
+        MIF: 0
+
+    Class: BankDatabase
+        MIF: 0
+
+    Class: Transaction
+        MIF: 0
+
+    Class: BalanceInquiry
+        MIF: 0.6
+
+    Class: Withdrawal
+        MIF: 0.5
+
+    Class: DepositSlot
+        MIF: 0
+
+    Class: Deposit
+        MIF: 0.5
+
+    Class: ATM
+        MIF: 0
+
+Metrics Name: Weighted Method Per Class
+
+    Class Name: Screen
+            Method Name: __init__
+            Complexity: 1            Method Name: displayMessage
+            Complexity: 1            Method Name: displayDollarAmount
+            Complexity: 1        Weighted Method Per Class for Screenis 3
+
+    Class Name: CashDispenser
+            Method Name: __init__
+            Complexity: 1            Method Name: __init__
+            Complexity: 1            Method Name: dispenseCash
+            Complexity: 1            Method Name: isSufficientCashAvailable
+            Complexity: 2        Weighted Method Per Class for CashDispenseris 5
+
+    Class Name: Account
+            Method Name: __init__
+            Complexity: 1            Method Name: validatePin
+            Complexity: 2            Method Name: getAvailableBalance
+            Complexity: 1            Method Name: getTotalBalance
+            Complexity: 1            Method Name: credit
+            Complexity: 1            Method Name: debit
+            Complexity: 1            Method Name: getAccountNumber
+            Complexity: 1        Weighted Method Per Class for Accountis 8
+
+    Class Name: BankDatabase
+            Method Name: __init__
+            Complexity: 1            Method Name: getAccount
+            Complexity: 3            Method Name: authenticateUser
+            Complexity: 2            Method Name: getAvailableBalance
+            Complexity: 1            Method Name: getTotalBalance
+            Complexity: 1            Method Name: credit
+            Complexity: 1            Method Name: debit
+            Complexity: 1        Weighted Method Per Class for BankDatabaseis 10
+
+    Class Name: Transaction
+            Method Name: getAccountNumber
+            Complexity: 1            Method Name: getScreen
+            Complexity: 1            Method Name: getBankDatabase
+            Complexity: 1            Method Name: execute
+            Complexity: 1        Weighted Method Per Class for Transactionis 4
+
+    Class Name: BalanceInquiry
+            Method Name: __init__
+            Complexity: 1            Method Name: execute
+            Complexity: 1        Weighted Method Per Class for BalanceInquiryis 2
+
+    Class Name: Withdrawal
+            Method Name: __init__
+            Complexity: 1            Method Name: execute
+            Complexity: 5            Method Name: displayMenuOfAmounts
+            Complexity: 5        Weighted Method Per Class for Withdrawalis 11
+
+    Class Name: DepositSlot
+            Method Name: isEnvelopeReceived
+            Complexity: 1        Weighted Method Per Class for DepositSlotis 1
+
+    Class Name: Deposit
+            Method Name: __init__
+            Complexity: 1            Method Name: execute
+            Complexity: 2            Method Name: promptForDepositAmount
+            Complexity: 1        Weighted Method Per Class for Depositis 4
+
+    Class Name: ATM
+            Method Name: authenticateUser
+            Complexity: 2            Method Name: performTransaction
+            Complexity: 4            Method Name: displayMainMenu
+            Complexity: 1            Method Name: createTransaction
+            Complexity: 4            Method Name: run
+            Complexity: 3        Weighted Method Per Class for ATMis 14
+
+Metrics Name: Coupling Factor
+Coupling Between Objects: 
+                Screen  CashDispenser  Account  BankDatabase  Transaction  BalanceInquiry  Withdrawal  DepositSlot  Deposit  ATM
+Screen               0              0        0             0            1               0           0            0        0    1
+CashDispenser        0              0        0             0            0               0           1            0        0    1
+Account              0              0        0             1            0               0           0            0        0    0
+BankDatabase         0              0        0             0            1               0           0            0        0    1
+Transaction          0              0        0             0            0               0           0            0        0    0
+BalanceInquiry       0              0        0             0            0               0           0            0        0    0
+Withdrawal           0              0        0             0            0               0           0            0        0    0
+DepositSlot          0              0        0             0            0               0           0            0        1    1
+Deposit              0              0        0             0            0               0           0            0        0    0
+ATM                  0              0        0             0            0               0           0            0        0    0
+
+COF: 1.0
+
+
+LOC:  322
+Multi Line of Comment:  0
+Single Line of Comment:  15
+Comment Percentage:  0.06437768240343347

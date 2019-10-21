@@ -1,0 +1,72 @@
+Generating AST.......
+
+Parent Class: Ball
+
+Parent Class: Block
+
+Metrics Name: Depth of Inheritance Tree: 
+
+    DIT: 1
+
+Metrics Name: Number of Child
+
+    Class: Block
+        Number of Child: 0
+
+    Class: Ball
+        Number of Child: 0
+
+Metrics Name: Attribute Hiding Factor
+
+    Class: Ball: 
+        FHF: 0.0
+    Class: Block: 
+        FHF: 0.0
+Metrics Name: Method Hiding Factor
+
+    Class Ball: 
+        MHF: 0.3333333333333333
+    Class Block: 
+        MHF: 0.25
+Metrics Name: Method Inheritance Factor
+
+    Class: Ball
+        MIF: 0
+
+    Class: Block
+        MIF: 0
+
+Metrics Name: Weighted Method Per Class
+
+    Class Name: Ball
+            Method Name: __init__
+            Complexity: 1            
+	    Method Name: update
+            Complexity: 3            
+	    Method Name: draw
+            Complexity: 1        
+	    Weighted Method Per Class for Ballis 5
+
+    Class Name: Block
+            Method Name: __init__
+            Complexity: 1            
+	    Method Name: update
+            Complexity: 1            
+            Method Name: set_rectangle
+            Complexity: 1            
+            Method Name: draw
+            Complexity: 1            
+            Method Name: debug_create_balls
+            Complexity: 1            
+            Method Name: debug_create_blocks
+            Complexity: 1            
+            Method Name: main
+            Complexity: 9        
+            Weighted Method Per Class for Blockis 15
+
+Metrics Name: Coupling Factor
+Coupling Between Objects: 
+       Ball  Block
+Ball      0      0
+Block     0      0
+    COF: 0.0
